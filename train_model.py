@@ -67,4 +67,9 @@ print("\nClassification Report:\n", classification_report(y_test, y_pred))
 
 # ---------------------- Save Model ----------------------
 joblib.dump(model, 'model/hedge_fund_model.pkl')
+joblib.dump(label_encoder, 'model/stock_label_encoder.pkl')
+joblib.dump(features, 'model/model_features.pkl')  # ⬅️ NEW line
+
 print("\n💾 Model saved as 'hedge_fund_model.pkl'.")
+print("💾 Label encoder saved as 'stock_label_encoder.pkl'.")
+print("💾 Feature list saved as 'model_features.pkl'.")
